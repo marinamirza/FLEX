@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar with FLEX(flexbox)</title>
+    <style>
+        body{
+            background-color: #333;
+            font-family: Arial;
+        }
+        .navbar ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #111;
+            /* NEW */
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+        @media (max-width: 800px) {
+            .navbar ul {
+                flex-direction:  column;
+            }
+        }
+        .navbar li {
+            padding: 0.5em;
+            border: 1px solid red;
+        }
+        .navbar .brand {
+            font-size: 30px;
+            margin: 0.5em;
+        }
+        .navbar a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <!-- flex container -->
+        <ul>
+            <!-- flex item -->
+            <li class="brand"><a href="">BRAND</a></li>
+            <li><a href="">Officia!</a></li>
+            <li><a href="">Illo!</a></li>
+            <li><a href="">Reiciendis.</a></li>
+            <li><a href="">Enim.</a></li>
+            <li><a href="">Sequi?</a></li>
+            <li><a href="">Ipsam.</a></li>
+        </ul>
+        <!-- flex container end -->
+    </nav>
+</body>
+</html>
